@@ -1,0 +1,30 @@
+{
+  "name": "turbo-bun-svelte-trpc-starter",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "serve": "turbo run serve --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "check": "turbo run check",
+    "format": "prettier -w --plugin-search-dir=. ."
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-svelte": "^2.9.0",
+    "svelte": "^3.55.1",
+    "turbo": "^1.8.2"
+  },
+  "packageManager": "pnpm@7.22.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

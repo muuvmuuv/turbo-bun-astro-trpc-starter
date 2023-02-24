@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-custom",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.53.0",
+    "@typescript-eslint/parser": "^5.53.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-turbo": "^0.0.8",
+    "eslint-plugin-astro": "^0.23.0",
+    "eslint-plugin-compat": "^4.1.2",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "svelte": "^3.55.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

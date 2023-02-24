@@ -1,0 +1,11 @@
+{
+  "prettier.documentSelectors": ["**/*.svelte","**/*.astro"]
+  "eslint.probe": ["javascript", "typescript", "svelte", "astro"],
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.words": ["trpc"]
+}
