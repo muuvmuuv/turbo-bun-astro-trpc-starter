@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "eslint": "^8.31.0",
-    "tsconfig": "workspace:*",
+    "tsconfig-preset": "workspace:^",
     "typescript": "^4.9.4"
   }
 }

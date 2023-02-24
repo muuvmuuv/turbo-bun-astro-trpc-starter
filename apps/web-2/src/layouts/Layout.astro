@@ -4,21 +4,32 @@ export interface Props {
 }
 
 const { title } = Astro.props
+
+const API_URL = import.meta.env.PUBLIC_RPC_URL
+
+const CSP = `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; connect-src 'self' ${API_URL}`
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="Content-Security-Policy" content={CSP} />
+
+    <link rel="preconnect" href={API_URL} crossorigin />
+    <link rel="dns-prefetch" href={API_URL} />
+
     <title>{title}</title>
   </head>
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
     --accent: 124, 58, 237;
@@ -29,7 +40,7 @@ const { title } = Astro.props
     background-color: #f6f6f6;
   }
   code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-      Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+      monospace;
   }
 </style>

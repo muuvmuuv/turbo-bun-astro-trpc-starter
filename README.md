@@ -9,9 +9,7 @@ everything you want.
 - Bun
 - tRPC
 - Svelte
-- SvelteKit
-- Vite
-- Vitest
+- Astro
 - Playwright
 - Turborepo
 - pnpm

@@ -2,42 +2,20 @@
   import { onMount } from "svelte"
 
   import type { Post } from "server/routes/post"
-
-  import { page } from "$app/stores"
-  import { trpc } from "$lib/trpc"
-
-  let greeting = "press the button to load data"
-  let loading = false
-
-  const loadData = async () => {
-    loading = true
-    try {
-      greeting = await trpc($page).hello.query()
-    } catch (error) {
-      console.error(error)
-    } finally {
-      loading = false
-    }
-  }
+  import { trpc } from "../lib/trpc"
 
   let posts: Post[] = []
 
   onMount(async () => {
+    console.log("HEY")
+
     try {
-      posts = await trpc($page).post.get.query()
+      posts = await trpc().post.get.query()
     } catch (error) {
       console.error(error)
-    } finally {
-      loading = false
     }
   })
 </script>
-
-<h6>Loading data in<br /><code>+page.svelte</code></h6>
-
-<a href="#load" role="button" class="secondary" aria-busy={loading} on:click|preventDefault={loadData}>Load</a>
-
-<p>{greeting}</p>
 
 <h3>Posts</h3>
 

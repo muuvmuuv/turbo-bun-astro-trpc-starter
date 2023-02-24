@@ -1,6 +1,12 @@
 {
   "prettier.documentSelectors": ["**/*.svelte","**/*.astro"]
   "eslint.probe": ["javascript", "typescript", "svelte", "astro"],
+    "eslint.validate": [
+    "javascript",
+    "typescript", 
+    "svelte", 
+    "astro", 
+  ],
   "[svelte]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

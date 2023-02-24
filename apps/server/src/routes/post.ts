@@ -7,12 +7,7 @@ export interface Post {
   name: string
 }
 
-const posts: Post[] = [
-  { name: "First Post" },
-  { name: "Second Post" },
-  { name: "Third Post" },
-  { name: "Fourth Post" },
-]
+const posts: Post[] = [{ name: "First Post" }, { name: "Second Post" }, { name: "Third Post" }, { name: "Fourth Post" }]
 
 const t = initTRPC.create()
 

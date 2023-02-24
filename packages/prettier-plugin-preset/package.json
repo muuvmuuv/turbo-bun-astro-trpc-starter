@@ -1,0 +1,14 @@
+{
+  "name": "prettier-plugin-preset",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "dependencies": {
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-svelte": "^2.9.0"
+  }
+}

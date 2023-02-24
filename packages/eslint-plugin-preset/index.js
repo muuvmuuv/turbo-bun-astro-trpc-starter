@@ -4,16 +4,12 @@
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: [
-    "eslint:recommended",
-    "plugin:sonarjs/recommended",
-    "plugin:unicorn/recommended",
-    "turbo",
-  ],
+  extends: ["eslint:recommended", "plugin:sonarjs/recommended", "plugin:unicorn/recommended", "turbo"],
   plugins: ["simple-import-sort"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
+    project: "tsconfig.json",
   },
   rules: {
     "simple-import-sort/imports": [
@@ -34,10 +30,7 @@ module.exports = {
       files: ["*.ts"],
       parser: "@typescript-eslint/parser",
       plugins: ["tsdoc", "@typescript-eslint"],
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/strict",
-      ],
+      extends: ["plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/strict"],
       rules: {
         "tsdoc/syntax": "error",
       },
@@ -49,10 +42,7 @@ module.exports = {
       settings: {
         "svelte3/typescript": () => require("typescript"),
       },
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/strict",
-      ],
+      extends: ["plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/strict"],
       env: {
         browser: true,
       },

@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-custom",
+  "name": "eslint-config-preset",
   "version": "0.0.0",
   "main": "index.js",
   "private": true,
@@ -20,9 +20,7 @@
     "eslint-plugin-svelte3": "^4.0.0",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-unicorn": "^45.0.2",
-    "svelte": "^3.55.1"
-  },
-  "devDependencies": {
+    "svelte": "^3.55.1",
     "typescript": "^4.9.5"
   }
 }

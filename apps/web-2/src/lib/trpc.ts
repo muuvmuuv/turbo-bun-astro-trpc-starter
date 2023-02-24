@@ -24,9 +24,9 @@ function createTRPCClient(init?: TRPCClientInit) {
       throw new Error("Calling tRPC server requires passing a valid LoadEvent argument")
     }
 
-    link = httpBatchLink({ url: import.meta.env.VITE_RPC_URL, fetch: init.fetch })
+    link = httpBatchLink({ url: import.meta.env.PUBLIC_RPC_URL, fetch: init.fetch })
   } else {
-    link = httpBatchLink({ url: import.meta.env.VITE_RPC_URL })
+    link = httpBatchLink({ url: import.meta.env.PUBLIC_RPC_URL })
   }
 
   return createTRPCProxyClient<Router>({ links: [link] })

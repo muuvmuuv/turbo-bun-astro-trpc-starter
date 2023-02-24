@@ -11,15 +11,15 @@
     "check": "echo 'tsc -p ./tsconfig.json --noEmit'"
   },
   "dependencies": {
-    "@trpc/server": "^10.8.1",
-    "zod": "^3.20.2"
+    "@trpc/server": "^10.12.0",
+    "zod": "^3.20.6"
   },
   "devDependencies": {
     "bun-livereload": "^1.0.3",
-    "bun-types": "^0.4.0",
-    "eslint": "^8.31.0",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.9.4"
+    "bun-types": "^0.5.7",
+    "eslint": "^8.34.0",
+    "tsconfig-preset": "workspace:^",
+    "typescript": "^4.9.5"
   },
   "engines": {
     "bun": "^0.4.0"
